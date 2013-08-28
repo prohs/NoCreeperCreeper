@@ -18,8 +18,8 @@ public class NoCreeperCreeper extends EntityCreeper {
 		boolean flg = false;
 		if (par1 == 1) {
 			flg = false;
-			explosionRadius = 4;
-			fuseTime = 30;
+			explosionRadius = 3;
+			fuseTime = 20;
 		}
 		if (par1 == 2) {
 			flg = true;
@@ -28,8 +28,8 @@ public class NoCreeperCreeper extends EntityCreeper {
 		}
 		if (par1 == 3) {
 			flg = true;
-			explosionRadius = 5;
-			fuseTime = 20;
+			explosionRadius = 6;
+			fuseTime = 40;
 		}
 		return flg;
 	}
@@ -50,6 +50,7 @@ public class NoCreeperCreeper extends EntityCreeper {
 		super.onLivingUpdate();
 	}
 
+	@Override
 	public void onUpdate() {
 		if (this.isEntityAlive()) {
 			this.lastActiveTime = this.timeSinceIgnited;
